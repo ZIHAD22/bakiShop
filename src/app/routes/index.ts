@@ -1,8 +1,9 @@
 import { Request, Response, Router } from "express";
 import userRoutes from "../modules/user/user.route";
+import { TRoutes } from "./index.interface";
 const router = Router();
 
-const routes = [
+const routes: [TRoutes] = [
   {
     path: "/user",
     route: userRoutes,
