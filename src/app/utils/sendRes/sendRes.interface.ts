@@ -5,19 +5,19 @@ type TError<T> = T;
 
 type TSendResBase = {
   res: Response;
-  status: number;
+  status?: number;
   message: string;
 };
 
 type TSendResData<T> = TSendResBase & {
   data: TData<T>;
-  success: true;
+  success?: true;
   error?: never;
 };
 
 type TSendResError<T> = TSendResBase & {
   error: TError<T>;
-  success: false;
+  success?: false;
   data?: never;
 };
 
